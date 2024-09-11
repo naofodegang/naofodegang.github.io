@@ -1,0 +1,172 @@
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*--------------------------------------------*/
+
+body {
+    background-color: black;
+}   
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0 20px;
+    margin-bottom: 100pt;
+}
+
+.navbar a {
+    font-family: Amatic SC, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+}
+
+.navbar p {
+    color: white;
+    font-family: Amatic SC, sans-serif;
+}
+
+.navbar li:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+.navbar li {
+    transition: all 0.3s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Amatic SC, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    margin-top: 150pt;
+    margin-bottom: 150pt;
+}
+
+.container li:hover {
+    transition: none;
+    transform: none;
+}
+
+.container li {
+    list-style-type: none;
+}
+
+.container img {
+    height: auto;
+    width: 300pt;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Amatic SC, sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    margin-left: 200pt;
+    margin-right: 100pt;
+    margin-top: 200pt;
+    margin-bottom: 100pt;
+}
+
+.container2 img {
+    width: 300pt;
+    height: auto;
+}
+
+.container2 li:hover {
+    transition: none;
+    transform: none;
+}
+
+.container2 li {
+    list-style-type: none;
+}
+
+.youtube a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    color: white;
+    font-family: Amatic SC, sans-serif;
+    font-size: 50pt;
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-family: Amatic SC, sans-serif;
+    font-size: 20pt;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: Amatic SC, sans-serif;
+    font-size: 300pt;
+    margin: 0 auto;
+}
+
+/* Modo Claro (LightMode) */
+body.dark {
+    background-color: rgb(255, 255, 255); 
+}
+
+h1.dark {
+    color: rgb(0, 0, 0); 
+}
+
+.navbar.dark a,
+.navbar.dark p,
+.navbar.dark li {
+    color: rgb(0, 0, 0); 
+}
+
+.container.dark, 
+.container2.dark {
+    color: rgb(0, 0, 0); 
+}
+
+.tracks.dark, 
+.tracks2.dark {
+    color: rgb(0, 0, 0); 
+}
+
+#themeToggle{
+    background: none;
+    border: none; 
+    outline: none; 
+    font-size: 24pt; 
+    cursor: pointer; 
+    color: inherit; 
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
