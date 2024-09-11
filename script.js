@@ -17,9 +17,9 @@ themeToggle.addEventListener("click", () => {
     // Troca o ícone do botão
     if (body.classList.contains("dark")) {
         themeToggle.innerHTML = "🌙"; 
-        img.src = "/capa do naofuck.png"; 
+        img.src = "capa do naofuck.png"; 
     } else {
         themeToggle.innerHTML = "☀️"; 
-        img.src = "/meninossmt.gif"; 
+        img.src = "meninossmt.gif"; 
     }
 });
