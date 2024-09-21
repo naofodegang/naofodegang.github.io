@@ -13,6 +13,7 @@
 
 body {
     background-color: black;
+    overflow-x: hidden;
 }   
 
 .navbar {
@@ -20,7 +21,6 @@ body {
     justify-content: center;
     gap: 20px;
     list-style-type: none;
-    padding: 0 20px;
     margin-bottom: 100pt;
 }
 
@@ -105,13 +105,6 @@ body {
     text-decoration: none;
 }
 
-.material-symbols-outlined {
-    color: white;
-    font-family: Amatic SC, sans-serif;
-    font-size: 50pt;
-    text-decoration: none;
-}
-
 .home {
     display: flex;
     justify-content: center;  
@@ -131,9 +124,11 @@ h1 {
     font-family: Amatic SC, sans-serif;
     font-size: 300pt;
     margin: 0 auto;
+    z-index: 1;
 }
 
-h2 {
+h2 {    
+    display: none;
     text-align: center;
     font-family: Amatic SC, sans-serif;
     margin: 0 auto;
@@ -147,6 +142,10 @@ body.dark {
 h1.dark {
     color: rgb(0, 0, 0); 
 }
+
+body.dark .menu-toggle .bar {
+    background-color: black;     
+}   
 
 .navbar.dark a,
 .navbar.dark p,
@@ -175,4 +174,107 @@ h1.dark {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* Estilos para o menu burger */
+.menu-toggle {
+    display: none; /* Escondido em telas grandes */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}   
+
+@media (max-width: 768px) {
+    .navbar {
+        background-color: none;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    h2{
+        text-align: center;
+        font-family: Amatic SC, sans-serif;
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+    }
+
+    /* Navbar oculta inicialmente */
+    .navbar {
+        display: none;
+        z-index: 100;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    /* Ajuste para os itens do navbar */
+    .navbar a {
+        font-size: 14pt;
+    }
+
+    /* Container responsivo */
+    .container, .container2 {
+        flex-direction: flex; /* Alinha os itens verticalmente em telas pequenas */
+        margin: 20px 0;
+    }
+
+    .tracks, .tracks2 {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .container img, .container2 img {
+        max-width: 100%;
+    }
+
+    .container2 img{
+        width: 120%;
+        margin-left: 15px;
+    }
+
+    /* Footer responsivo */
+    footer {
+        font-size: 16pt;
+    }
+}
+
+/* Ajustes para telas médias (tablets e laptops pequenos) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 15vw; /* Escala conforme o tamanho da tela */
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .container img, .container2 img {
+        max-width: 80%; /* Menor em telas intermediárias */
+    }
+
+    .navbar a {
+        font-size: 2rem;
+    }
 }
