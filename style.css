@@ -304,7 +304,7 @@ body.dark .menu-toggle .bar {
     }
 }
 
-@media (max-width: 378px) {
+@media (max-width: 396px) {
     .menu-toggle {
         display: flex;
         flex-direction: column;
