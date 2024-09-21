@@ -213,25 +213,69 @@ body.dark .menu-toggle .bar {
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 101; /* Para garantir que fique acima do conteúdo */
         position: absolute;
         top: 70px;
         right: 20px;
     }
 
-    /* Navbar oculta inicialmente */
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    /* Animação quando o menu é aberto */
+    .navbar.open .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .navbar.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
     .navbar {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        list-style-type: none;
         z-index: 100;
     }
 
     .navbar.open {
         display: flex;
+        justify-content: center;
     }
 
-    /* Ajuste para os itens do navbar */
     .navbar a {
-        font-size: 14pt;
+        font-size: 16pt;
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        transition: all 0.3s ease;
     }
+
+    .navbar a:hover {
+        transform: scale(1.1);
+    }
+
 
     /* Container responsivo */
     .container, .container2 {
@@ -260,6 +304,99 @@ body.dark .menu-toggle .bar {
     }
 }
 
+@media (max-width: 378px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 101; /* Para garantir que fique acima do conteúdo */
+        position: absolute;
+        top: 35px;
+        right: 20px;
+    }
+
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    /* Animação quando o menu é aberto */
+    .navbar.open .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .navbar.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        list-style-type: none;
+        z-index: 100;
+    }
+
+    .navbar.open {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 16pt;
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+        transform: scale(1.1);
+    }
+
+
+    .tracks, .tracks2 {
+        padding: 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .container, .container2 {
+        display: block; /* Stacks the image and tracks vertically */
+        text-align: center;
+    }
+
+    .container img, .container2 img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .tracks, .tracks2 {
+        margin-top: 10px; /* Adds space between image and tracks */
+    }
+
+    /* Footer responsivo */
+    footer {
+        font-size: 16pt;
+    }
+}
+
 /* Ajustes para telas médias (tablets e laptops pequenos) */
 @media (max-width: 1024px) {
     h1 {
@@ -272,6 +409,10 @@ body.dark .menu-toggle .bar {
 
     .container img, .container2 img {
         max-width: 80%; /* Menor em telas intermediárias */
+    }
+
+    .container2 img {
+        width: 150%;
     }
 
     .navbar a {
