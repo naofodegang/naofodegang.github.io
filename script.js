@@ -33,5 +33,6 @@ themeToggle.addEventListener("click", () => {
         themeToggle.innerHTML = "☀️"; 
         img.src = "/meninossmt.gif"; 
         mds.style.display = "none"; // Oculta o h2
+        copyright.style.color = "white"
     }
 });
